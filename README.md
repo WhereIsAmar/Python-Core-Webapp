@@ -1,2 +1,2 @@
-#Studi
-##The simple way™
+# Studi
+## The simple way™
