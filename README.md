@@ -1,1 +1,2 @@
-# 0x2BProject
+#Studi
+##The simple way™
