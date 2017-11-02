@@ -3,7 +3,7 @@ from flask import Flask, flash, redirect, render_template, request, session, abo
 import os
 from sqlalchemy.orm import sessionmaker
 from tabledef import *
-engine = create_engine('sqlite:///tutorial.db', echo=True)
+engine = create_engine('sqlite:///users.db', echo=True)
  
 app = Flask(__name__)
   
@@ -12,7 +12,9 @@ def home():
     if not session.get('logged_in'):
         return render_template('login.html')
     else:
-        return "Hello Boss!  <a href='/logout'>Logout</a>"
+
+        return
+        return render_template("landing.html")
                                
 @app.route('/login', methods=['POST'])
 def do_admin_login():
@@ -24,6 +26,7 @@ def do_admin_login():
     s = Session()
     query = s.query(User).filter(User.username.in_([POST_USERNAME]), User.password.in_([POST_PASSWORD]) )
     result = query.first()
+    print(result)
     if result:
         session['logged_in'] = True
     else:
