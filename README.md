@@ -4,11 +4,14 @@
 ## Hi Team! Anya here.
 
 I'm struggling to understand or be able to make an impact on what Ethan is doing, so I've rebooted it in python.
-Python makes everything super easy to do and understand. If you want to understand what code is currently here, check out this tutorial: https://pythonspot.com/en/login-authentication-with-flask/
+Python makes everything super easy to do and understand. 
+I used this tutorial to get everything started, check it out: https://pythonspot.com/en/login-authentication-with-flask/
 This is going to be a responsive webapp, which should eliminate the need for an actual mobile build.
 
+Here's what I think we can do to move forward with this:
+
 Front end people: Look into HTML5UP. It's open-source and free for personal and commercial use. I'm happy to help out if you're confused as to how to integrate a pre-made template into this project. 
-Modifying the HTML5UP templates is kindof a pain but they look really great and it's fairly easy to edit once you look at the code and what it spits out
+Modifying the HTML5UP templates is kindof a pain but they look really great and it's fairly easy to edit once you look at the code and what it spits out.
 
 Back end people: We need to do 3 things:
 - Sign Up SQL database plugin
@@ -16,7 +19,7 @@ Back end people: We need to do 3 things:
 - Modify database to inlude: 
   - Last known location
   - Topic studying
-  - broadcast location (Yes/no)
+  - broadcast location (Yes/no field)
 
 I whipped this up in ~2ish hours and it has a SQL backend so we can talk about that for the 3rd milestone.
 I'm not going to enforce pull requests because this is a small one-semester project and I think it's more important for everyone to just be able to contribute instead of being moderated by one member. 
@@ -24,9 +27,7 @@ I've forgotten to add some of you as contributers because don't know your userna
 
 How to get your instance up and running:
 Install flask: ```pip install flask```
-
 Install SqlAlchemy: ```pip install Flask-SqlAlchemy ```
-
 Make sure your directory is accessible to all files ```chmod -R 777 . ```
 
 ```
