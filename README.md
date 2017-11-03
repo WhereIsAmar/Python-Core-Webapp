@@ -15,16 +15,12 @@ Modifying the HTML5UP templates is kindof a pain but they look really great and 
 
 Back end people: We need to do 3 things:
 - Sign Up SQL database plugin
-- API calls to get location (Mapquest: https://developer.mapquest.com/documentation/)
+- API calls to get location (Google Maps)
 - Modify database to inlude: 
   - Last known location
   - Topic studying
   - broadcast location (Yes/no field)
-
-I whipped this up in ~2ish hours and it has a SQL backend so we can talk about that for the 3rd milestone.
-I'm not going to enforce pull requests because this is a small one-semester project and I think it's more important for everyone to just be able to contribute instead of being moderated by one member. 
-I've forgotten to add some of you as contributers because don't know your usernames, so please message me on slack and I will do so asap.
-
+  
 How to get your instance up and running:
 Install flask: ```pip install flask```
 Install SqlAlchemy: ```pip install Flask-SqlAlchemy ```
