@@ -8,22 +8,24 @@ engine = create_engine('sqlite:///users.db', echo=True)
 Base = declarative_base()
 
 ########################################################################
-class User(Base):
+class Info(Base):
     """"""
-    __tablename__ = "users"
+    __tablename__ = "info"
 
     id = Column(Integer, primary_key=True)
     username = Column(String)
-    password = Column(String)
-    locationX = Column(Float)
-    locationY = Column(Float)
+    name = Column(String)
+    topic = Column(String)
+    specifics = Column(String)
+    location = Column(Boolean)
 
 #----------------------------------------------------------------------
-    def __init__(self, username, password, x, y):
+    def __init__(self, username, name, topic, specifics, location):
         """"""
         self.username = username
-        self.password = password
-        self.locationX = x
-        self.locationY = y
+        self.name = name
+        self.topic = topic
+        self.specifics = specifics
+        self.location = location
 # create tables
 Base.metadata.create_all(engine)
