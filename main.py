@@ -13,7 +13,10 @@ def home():
         return render_template('login.html')
     else:
         return render_template("landing.html")
-                               
+@app.route('/nearby')
+def nearby():
+    return "This section isn't up and running yet, check back soon!"
+
 @app.route('/login', methods=['POST'])
 def do_admin_login():
          

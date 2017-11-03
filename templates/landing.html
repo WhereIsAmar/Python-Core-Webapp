@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Fractal by HTML5 UP</title>
+		<title> Studi</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="../static/js/ie/html5shiv.js"></script><![endif]-->
@@ -17,8 +17,9 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="../static/css/ie9.css" /><![endif]-->
 		<style>
 #map {
-	height: 400px;
+	height: 500px;
 	width: 100%;
+	margin: 10 10 10 10;
 }
 		</style>
 
@@ -31,8 +32,8 @@
 				<h1><a href="#">Welcome</a></h1>
 				<p>What would you like to Studi today?</p>
 				<ul class="actions">
-					<li><a href="#one" class="button special">Set Topic</a></li>
-					<li><a href="#two" class="button icon fa-chevron-down scrolly">Set Location</a></li>
+					<li><a href="#one" class="button special scrolly">Set Topic</a></li>
+					<li><a href="#two" class="button icon scrolly">Set Location</a></li>
 				</ul>
 			</div>
 		</header>
@@ -42,18 +43,24 @@
 			<header class="major">
 				<h2>Please set your study topic</h2>
 			</header>
+			<form method="post" action="setTopic()">
+				<div class="row uniform">
 			<ul class="actions fit">
-				<li><input id="arts" name="topic" type="radio"><label for="arts"> Arts          . </label></li>
-				<li><input id="humn" name="topic" type="radio"><label for="humn"> Humanities    . </label></li>
-				<li><input id="soci" name="topic" type="radio"><label for="soci"> Social Science </label></li>
-				<li><input id="nats" name="topic" type="radio"><label for="nats"> Natural Science </label></li>
-				<li><input id="form" name="topic" type="radio"><label for="form"> Formal Science </label></li>
-				<li><input id="appl" name="topic" type="radio"><label for="appl"> Applied Science </label></li>
+				<li><input id="arts" name="topic" type="radio"><label for="arts">Arts           </label></li>
+				<li><input id="humn" name="topic" type="radio"><label for="humn">Humanities     </label></li>
+				<li><input id="appl" name="topic" type="radio"><label for="appl">Engineering</label></li>
 			</ul>
 			<ul class="actions fit">
-				<li><input type="text" id="specific" placeholder="Specific topic"></li>
-				<li><a id="submit" onclick="setTopic()"class="button special fit">Set Topic</a></li>
-			</ul>	
+				<li><input id="form" name="topic" type="radio"><label for="form">Mathematics</label></li>
+				<li><input id="nats" name="topic" type="radio"><label for="nats">Natural Science </label></li>
+				<li><input id="soci" name="topic" type="radio"><label for="soci">Social Science </label></li>
+			</ul>
+			<div class="12u$">
+			<input type="text" style="text-align:center" id="specific" placeholder="Specific topic">
+		<a id="submit" onclick="setTopic()" type="submit" class="button special">Set Topic</a>
+			</div>
+				</div>
+			</form>
 		</section>
 
 		<!-- Two -->
@@ -86,6 +93,11 @@ function initMap(){
 		//updateMarkerStatus('Drag ended');
 		geocodePosition(marker.getPosition());
 	});
+	google.maps.event.addDomListener(window, "resize", function() {
+		   var center = map.getCenter();
+		   google.maps.event.trigger(map, "resize");
+		   map.setCenter(center); 
+	});
 }
 function geocodePosition(pos) {
 	geocoder.geocode({
@@ -107,8 +119,8 @@ function geocodePosition(pos) {
 				</section>
 				<section class="spotlight">
 					<div class="content">
-						<h3>See what others are working on</h3>
-						<ul class="actions fit"> 
+						<ul class="actions"> 
+							<li><h3>See what others are working on</h3></li>
 							<li><a href="/nearby" class="button special">Go ></a></li>
 						</ul>
 					</div>
@@ -117,7 +129,6 @@ function geocodePosition(pos) {
 		</section>
 
 		<!-- Four -->
-		<!--
 	  <section id="four" class="wrapper">
 	  <div class="inner">
 
@@ -130,7 +141,7 @@ function geocodePosition(pos) {
 	  <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
 	  This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
 	  This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-	  <hr />
+	  hr />
 	  <header>
 	  <h4>Heading with a Subtitle</h4>
 	  <p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
