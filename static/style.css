@@ -8,16 +8,19 @@
 body {
 	font-family: Arial;
 	background-color: #3498DB;
-	padding: 50px;
+	padding: 20px;
 }
 .login {
-	margin: 20px auto;
-	width: 300px;
+	margin: 10% auto;
+	width: 100% or 250px;
 }
 .login-screen {
+	text-align:center;
+	width: 100%;
+	max-width: 550px;
 	background-color: #FFF;
 	padding: 20px;
-	border-radius: 5px
+	border-radius: 25px;
 }
 
 .app-title {
@@ -40,7 +43,8 @@ input {
 	font-size: 16px;
 	font-weight: 200;
 	padding: 10px 0;
-	width: 250px;
+	width: 100%;
+	max-width: 250px;
 	transition: border .5s;
 }
 
@@ -51,18 +55,19 @@ input:focus {
 
 .btn {
 	border: 2px solid transparent;
-	background: #3498DB;
+	background: #000;
 	color: #ffffff;
 	font-size: 16px;
 	line-height: 25px;
-	padding: 10px 0;
+	padding: 10px ;
 	text-decoration: none;
 	text-shadow: none;
 	border-radius: 3px;
 	box-shadow: none;
 	transition: 0.25s;
 	display: block;
-	width: 250px;
+	width: 100%;
+	max-width: 250px;
 	margin: 0 auto;
 }
 
