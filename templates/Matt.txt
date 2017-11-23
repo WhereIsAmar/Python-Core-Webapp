@@ -1,1 +1,0 @@
-I have made MattStyle.css to that I could see changes to createAccount.html. I would like to only have one style.css so that the main visual features casn be the same for login.html and createAccount.html. The only things different about MattStyle.css and style.css is style.css = login and MattStyle.css = main

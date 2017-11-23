@@ -124,13 +124,13 @@ input:focus {
 
 
 
-.createAccount {
+.mainScreen {
 	margin: 10% auto;
 	width: 100%;
 	max-width: 700px;
 }
 
-.createAccount-screen {
+.mainScreen-screen {
 	text-align:center;
 	width: 100%;
 	max-width: 700px;
@@ -148,7 +148,7 @@ input:focus {
 	color: #777;
 }
 
-.createAccount-form {
+.mainScreen-form {
 	text-align: center;
 }
 .control-group {
