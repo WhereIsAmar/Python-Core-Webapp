@@ -16,6 +16,7 @@
 		font: inherit;
 		vertical-align: baseline;
 		
+		
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -2045,7 +2046,7 @@
 	}
 
 	label {
-		display: block;
+		display: flex;
 		font-size: 0.9em;
 		font-weight: bold;
 		margin: 0 0 1em 0;
@@ -2144,7 +2145,7 @@
 			display: inline-block;
 			font-size: 1em;
 			font-weight: normal;
-			padding-left: 2em;
+			padding-left: 1.8em;
 			padding-right: 0.7em;
 			position: relative;
 		}
